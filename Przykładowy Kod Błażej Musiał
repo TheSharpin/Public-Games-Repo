@@ -1,0 +1,22 @@
+// Fragment systemu zapisu stanu gry dzięki Interfejsom, binarnemu formatowaniu i UUID na podstawie GUID
+ private void CaptureState(Dictionary<string, object> state)
+        {
+            foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
+            {
+                state[saveable.GetUniqueIdentifier()] = saveable.CaptureState();
+            }
+
+            state["lastSceneBuildIndex"] = SceneManager.GetActiveScene().buildIndex;
+        }
+
+        private void RestoreState(Dictionary<string, object> state)
+        {
+            foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
+            {
+                string id = saveable.GetUniqueIdentifier();
+                if (state.ContainsKey(id))
+                {
+                    saveable.RestoreState(state[id]);
+                }
+            }
+        }
