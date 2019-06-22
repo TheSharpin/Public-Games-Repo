@@ -1,4 +1,4 @@
-// Fragment systemu zapisu stanu gry dzięki Interfejsom, binarnemu formatowaniu i UUID na podstawie GUID
+// Fragment systemu zapisu stanu gry dzięki Interfejsom, binarnemu formatowaniu i UUID na podstawie GUID z projektu RPG
 using System;
 using System.Collections;
 using System.Collections.Generic;
