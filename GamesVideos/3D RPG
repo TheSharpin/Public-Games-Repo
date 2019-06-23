@@ -1,4 +1,6 @@
 *WORK IN PROGRESS*
+
+Description:
 3D RPG with isometric look. Including: Saving system with binary serialization, Scriptable objects, override animators,
 progression, many levels and diffrent ways of fight. More mechanics to come.
 
